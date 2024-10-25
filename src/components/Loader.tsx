@@ -1,5 +1,4 @@
 import React from 'react'
-import Splash from '../pages/Splash.tsx'
 
 const Loader = () => {
     return (

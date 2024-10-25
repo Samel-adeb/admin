@@ -6,6 +6,7 @@ export function load(percentPerlevel) {
     percentPerlevel.map((level) => {
         levelList.push("Level " + level.level);
         percentList.push(level.percentage);
+        return null;
     });
     var options = {
         series: percentList,

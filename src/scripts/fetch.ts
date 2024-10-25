@@ -213,7 +213,18 @@ export const addLevel = async (levelDetails: Object, token: string) => {
         showSuccessMessage(response.message);
         return response.level;
     } else {
-        showFailedMessage(response.message);
+        if(response && 'errors' in response){
+            Object.values(response.errors).map(error =>{
+                if(Array.isArray(error)){
+                    setTimeout(() =>{
+                        showFailedMessage(error[0]);
+                    }, 500);
+                    
+                }
+                return null;
+            });
+        }
+        
     }
 };
 
@@ -227,7 +238,17 @@ export const editLevel = async (levelId: string, levelDetails: Object, token: st
         showSuccessMessage(response.message);
         return response.level;
     } else {
-        showFailedMessage(response.message);
+        if(response && 'errors' in response){
+            Object.values(response.errors).map(error =>{
+                if(Array.isArray(error)){
+                    setTimeout(() =>{
+                        showFailedMessage(error[0]);
+                    }, 500);
+                    
+                }
+                return null;
+            });
+        }
     }
 };
 
@@ -270,7 +291,5 @@ export const uploadImage = async (imageFile: File, token: string) => {
 
 
 
-const sortUsersByRank = (userArray: Array<any>) => {
-    return userArray.sort((a, b) => a.rank - b.rank);
-};
+
 

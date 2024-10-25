@@ -51,9 +51,7 @@ const Players = () => {
   //   alert(isBlock)
   // }, [isBlock]);
 
-  const handle = () => {
-    alert('Handled');
-  };
+
   const columns = [
     { name: 'level_image_url', label: '', type: 'image' },
     { name: 'username', label: 'Username', type: 'text' },
@@ -67,9 +65,7 @@ const Players = () => {
   const actions = [
     { name: 'block', icon: 'ri-lock-star-fill', class: 'danger-light', callback: handleBlock }
   ];
-  const handleOnAdd = () => {
-    showInfoMessage('You can not add a new user from the admin panel');
-  }
+
 
 
   return (

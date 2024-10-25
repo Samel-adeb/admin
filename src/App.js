@@ -18,20 +18,25 @@ import Redirect from './components/Redirect.tsx';
 function App() {
   const location = useLocation();
 
-  const showNavbarRoutes = ['/dashboard', '/players', '/tasks', '/levels', '/notifications']; // List of routes that don't need the Navbar
-
-  // Check if the current route should hide the Navbar
-  const hideNavbar = useMemo(() => !showNavbarRoutes.includes(location.pathname), [location.pathname]);
+  // Memoize showNavbarRoutes to prevent it from changing on each render
+  const showNavbarRoutes = useMemo(
+    () => ['/dashboard', '/players', '/tasks', '/levels', '/notifications'],
+    []
+  );
+  const hideNavbar = useMemo(
+    () => !showNavbarRoutes.includes(location.pathname),
+    [location.pathname, showNavbarRoutes]
+  );
 
 
   return (
     <AppWrapper>
       <ToastContainer toastClassName='ff-secondary' />
-      
+
       {!hideNavbar ? (
-        
+
         <Navbar>
-          <Redirect/>
+          <Redirect />
           <Routes>
             <Route path="/dashboard" element={<Home />} />
             <Route path="/players" element={<Players />} />
@@ -41,7 +46,7 @@ function App() {
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Navbar>
-        
+
       ) : (
         <Routes>
           <Route path="/" element={<Splash />} />

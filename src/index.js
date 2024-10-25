@@ -8,7 +8,6 @@ import 'bootstrap/dist/css/bootstrap.min.css'; // Bootstrap CSS
 import 'bootstrap/dist/js/bootstrap';
 import './assets/css/styles.css';  // Your custom styles
 import './assets/css/icons.css';   // Icons CSS
-import './assets/css/custom.css';
 import 'apexcharts/dist/apexcharts.css'
 
 

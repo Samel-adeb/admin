@@ -74,7 +74,7 @@
   --default-font-family: 'Quicksand', sans-serif;/*"Playwrite DE Grund", cursive !important;*/
   --secondary-font-family:'Quicksand', sans-serif;
   --default-font-weight: 500;
-  --default-text-color: #fff/*#222f36;*/
+  --default-text-color: #fff;/*#222f36;*/
   --default-border: #f3f2f9;
   --default-background: #f9fafb;
   --menu-bg: #fff;
@@ -19672,6 +19672,7 @@ input.error {
 }
 @media (min-width: 992px) {
   [data-nav-layout=horizontal] {
+    cursor: pointer;
   }
   [data-nav-layout=horizontal][data-theme-mode=light] .app-sidebar .side-menu__item.active,
   [data-nav-layout=horizontal][data-theme-mode=light] .app-sidebar .side-menu__item:hover,

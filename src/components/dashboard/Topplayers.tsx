@@ -25,14 +25,14 @@ const Topplayers = () => {
                             {
                                 topplayers.map((player, index) =>
                                     <tr key={index}>
-                                        <td className='' scope="row">
+                                        <th className='' scope="row">
                                             <div className='d-flex justify-content-center w-100'>
                                                 <span className="avatar avatar-md avatar-rounded me-2 offline">
                                                     <img src={player.level_image_url ? `${process.env.REACT_APP_API_URL}${player.level_image_url}` : Avartar} alt="img" />
                                                 </span>
                                             </div>
-                                        </td>
-                                        <td scope="row">{player.username ?? ""}</td>
+                                        </th>
+                                        <td>{player.username ?? ""}</td>
                                         <td>
                                             <img src={Coin} alt="img" className='rounded-3' width={20} />
                                             {player.coin_balance ?? ""}

@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 
 const NotFound = () => {
   
@@ -470,9 +470,9 @@ const NotFound = () => {
                                 </div>
                             </div>
                             <div className="d-flex justify-content-between canvas-footer">
-                                <a href="javascript:void(0);" className="btn btn-primary">Buy Now</a>
+                               
                                 <a href="https://themehtmlForest.net/user/wcsrm" className="btn btn-secondary">Our Portfolio</a>
-                                <a href="javascript:void(0);" id="reset-all" className="btn btn-danger">Reset</a>
+                               
                             </div>
                         </div>
                     </div>

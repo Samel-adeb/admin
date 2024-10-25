@@ -33,7 +33,7 @@ const ScrollToTop = () => {
 
   return (
     <div className="scrollToTop bg-primary" style={{ display: "none" }}>
-      <span className="arrow lh-1"><i className="ti ti-arrow-big-up fs-16"></i></span>
+      <span className="arrow lh-1 ri-arrow-up-fill"><i className="ti ti-arrow-big-up ri-arrow-up-fill fs-16"></i></span>
     </div>
   );
 };

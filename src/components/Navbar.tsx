@@ -36,7 +36,7 @@ function Navbar({ children }) {
                         )}
                     </button>
 
-                    <a aria-label="anchor" className="navbar-brand fw-bolder fs-6 text-center" href="javascript:void(0);">
+                    <a href='#' aria-label="anchor" className="navbar-brand fw-bolder fs-6 text-center" >
                         PIRATE HUNT
                     </a>
                     <div>

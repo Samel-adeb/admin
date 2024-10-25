@@ -15,13 +15,13 @@ function extractLocalHour(utcDateString) {
 
 }
 export const load = function (dailyActiveUsersData) {
-    "use strict";
     const activeList = [];
     const timeList = [];
 
     dailyActiveUsersData.map((interval) => {
         activeList.push(interval.active_users);
         timeList.push(extractLocalHour(interval.interval_start)+' - '+extractLocalHour(interval.interval_end));
+        return null;
     });
 
 

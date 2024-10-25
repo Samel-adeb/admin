@@ -6,6 +6,7 @@ import { useAppContext } from '../../context/index.tsx';
 const columns = [
     { name: 'level', label: 'Level', type: 'text' },
     { name: 'level_name', label: 'Level Name', type: 'text' },
+    { name: 'level_reward', label: 'Level Up Reward', type: 'price' },
     { name: 'level_threshold', label: 'Level Threshold', type: 'text' },
     { name: 'taprate_reward', label: 'Taprate Reward', type: 'text' },
     { name: 'energy_reward', label: 'Energy Capacity', type: 'text' },
@@ -23,6 +24,7 @@ const LevelFormModal = ({ props }) => {
         level: '',
         level_name: '',
         level_threshold: '',
+        level_reward: '', 
         taprate_reward: '',
         energy_reward: '',
         taprate_price: 0,
@@ -56,6 +58,7 @@ const LevelFormModal = ({ props }) => {
                 level_image_url: '',
                 level: '',
                 level_name: '',
+                level_reward: '', 
                 level_threshold: '',
                 taprate_reward: '',
                 energy_reward: '',
@@ -122,7 +125,7 @@ const LevelFormModal = ({ props }) => {
                                     {/* {formData.level_image_url && (
                                         <img src={formData.level_image_url} alt="Level" className="mt-2 img-fluid" />
                                     )} */
-                                        formData.level_image_url && formData.level_image_url}
+                                        formData.level_image_url ? formData.level_image_url : 'waiting...'}
                                 </div>
                                 
                                 {/* Other form fields */}

@@ -5,7 +5,7 @@ import Table from '../components/tables/Table.tsx'
 import { useLocation } from 'react-router-dom'
 import { useAppContext } from '../context/index.tsx'
 import { addTask, editTask, getAllTasks, removeTask } from '../scripts/fetch.ts'
-import { showFailedMessage, showInfoMessage, showSuccessMessage, } from '../scripts/utils.js'
+import { showFailedMessage, showSuccessMessage, } from '../scripts/utils.js'
 import TaskFormModal from '../components/tables/TaskFormModal.tsx'
 import ConfirmDeleteModal from '../components/tables/ConfirmDeleteModal.tsx'
 
